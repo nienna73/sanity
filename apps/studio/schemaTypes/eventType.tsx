@@ -59,6 +59,7 @@ export const eventType = defineType({
         defineField({
             name: "format",
             type: "string",
+            validation: (rule) => rule.required(),
             options: {
                 list: ["in-person", "virtual"],
                 layout: "radio",
